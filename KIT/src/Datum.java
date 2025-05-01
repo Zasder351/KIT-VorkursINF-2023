@@ -8,14 +8,8 @@ public class Datum {
     String jahr;
 
     int indexM;
-    int cKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKk;
+    int c;
     int y;
-
-
-//change for the sake of change
-
-
-
 
 
     void setTag(String newTag){
@@ -71,7 +65,7 @@ public class Datum {
         char[] jahrChars = realJahr.toCharArray();
 
         String temporaryC = "" + jahrChars[0] + jahrChars[1];
-        cKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKk = Integer.parseInt(temporaryC);
+        c = Integer.parseInt(temporaryC);
 
         String temporaryY = "" + jahrChars[2] + jahrChars[3];
         y = Integer.parseInt(temporaryY);
@@ -79,8 +73,8 @@ public class Datum {
 
     }
 
-    int getcKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKk(){
-        return cKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKk;
+    int getC(){
+        return c;
     }
 
     int getY(){
@@ -99,8 +93,8 @@ public class Datum {
 
         int testMid = (int) Math.floor(2.6 * m - 0.2);
         int yDivide = (int) Math.floor(y / 4);
-        int cDivide =(int) Math.floor(cKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKk / 4);
-        int preW = (Integer.parseInt(tag) + testMid + y  + yDivide + cDivide - 2 * cKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKk);
+        int cDivide =(int) Math.floor(c / 4);
+        int preW = (Integer.parseInt(tag) + testMid + y  + yDivide + cDivide - 2 * c);
 
         w = mod(preW,7);
 
